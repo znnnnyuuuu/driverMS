@@ -1,0 +1,85 @@
+a {
+    text-decoration: none;
+    color: deepskyblue;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+.title a {
+    margin-left: 30px;
+}
+
+.content table {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.content th,
+.content td {
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    width: 16.666666%;
+    height: 40px;
+}
+
+.content th {
+    background-color: #bbb;
+    font-size: 18px;
+}
+
+.content tr:nth-child(2n) {
+    background-color: #eee;
+}
+
+#addDriver,
+#reviseDriver {
+    width: 420px;
+    height: 320px;
+    background-color: #eee;
+    font-size: 16px;
+    text-align: right;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    padding-right: 84px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    display: none;
+}
+
+#addDriver input[type=text],
+#reviseDriver input[type=text] {
+    width: 60%;
+    height: 20px;
+    margin: 10px;
+}
+
+#addDriver input[type=submit],
+#addDriver input[type=button],
+#reviseDriver input[type=submit],
+#reviseDriver input[type=button] {
+    width: 80px;
+    height: 30px;
+    margin: 20px;
+    font-size: 16px;
+}
+
+#mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}

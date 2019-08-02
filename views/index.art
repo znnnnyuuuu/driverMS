@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>driver management system</title>
+    <link rel="stylesheet" href="/www/css/style.css">
+    <script src="/www/js/jquery-1.12.2.js"></script>
+    <script src="/www/js/popup.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        Driver Management System
+        <a href="javascript:;" id="btnAdd">Add</a>
+    </div>
+    <div class="content">
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Team</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Grid</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each list}}
+                <tr>
+                    <td>{{$value.number}}</td>
+                    <td>{{$value.team}}</td>
+                    <td>{{$value.name}}</td>
+                    <td>{{$value.score}}</td>
+                    <td>{{$value.grid}}</td>
+                    <td><a href="javascript:;" class="btnRev">Revise</a> | <a href="/deleteDriver?number={{$value.number}}">Delete</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div id="mask"></div>
+    <div id="addDriver">
+        <form action="/addDriver" method="POST" id="addDriverForm">
+            Number: <input type="text" name="number"><br>
+            Team: <input type="text" name="team"><br>
+            Name: <input type="text" name="name"><br>
+            Score: <input type="text" name="score"><br>
+            Grid :<input type="text" name="grid"><br>
+            <input type="submit" value="Add">
+            <input type="button" value="Cancel" id="addCancel">
+        </form>
+    </div>
+    <div id="reviseDriver">
+        <form action="/reviseDriver" method="POST" id="reviseDriverForm">
+            Number: <input type="text" name="number"><br>
+            Team: <input type="text" name="team"><br>
+            Name: <input type="text" name="name"><br>
+            Score: <input type="text" name="score"><br>
+            Grid :<input type="text" name="grid"><br>
+            <input type="submit" value="Revise">
+            <input type="button" value="Cancel" id="reviseCancel">
+        </form>
+    </div>
+</body>
+
+</html>
